@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="detailView"
+            type="com.hasankanal.kotlinsearchphotoapp.ui.details.DetailViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:background="@color/primaryDarkColor"
+    tools:context=".ui.details.DetailsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cv_detail"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="6"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:id="@+id/iv_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_foreground"
+                        android:layout_weight="6"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="4">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_username"
+                                android:text="Username: "
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/muli_bold"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_detail_username"
+                                android:text="Hasan"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:textSize="18sp"
+                                android:layout_toEndOf="@id/tv_username"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_location"
+                                android:text="Location: "
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:layout_below="@id/tv_username"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_detail_location"
+                                android:text="Hatay"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:textSize="18sp"
+                                android:layout_toEndOf="@id/tv_location"
+                                android:layout_below="@id/tv_detail_username"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_total_photo"
+                                android:text="Total Photo: "
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/muli_bold"
+                                android:layout_below="@id/tv_location"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_detail_total_photo_number"
+                                android:text="18"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:textSize="18sp"
+                                android:layout_toEndOf="@id/tv_total_photo"
+                                android:layout_below="@id/tv_detail_location"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_total_likes"
+                                android:text="Total Likes:"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:textSize="18sp"
+                                android:layout_below="@id/tv_total_photo"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_details_total_likes"
+                                android:text="15"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:textSize="18sp"
+                                android:layout_below="@id/tv_detail_total_photo_number"
+                                android:layout_toEndOf="@id/tv_total_likes"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_total_collections"
+                                android:text="Total Collection:"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:textSize="18sp"
+                                android:layout_below="@id/tv_total_likes"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_details_total_collections"
+                                android:text="23"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/muli_bold"
+                                android:textSize="18sp"
+                                android:layout_below="@id/tv_details_total_likes"
+                                android:layout_toEndOf="@id/tv_total_collections"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"/>
+
+                            <ImageView
+                                android:id="@+id/imgFavorite"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_favorite_border"
+                                android:layout_below="@id/tv_total_collections"
+                                android:layout_marginStart="10dp"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="4"
+                    android:weightSum="10">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Photographer Biography:"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/muli_bold"
+                        android:layout_weight="8"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvOverview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Bio"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/muli_bold"
+                        android:layout_weight="2"/>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_detail_background"
+            />
+    </LinearLayout>
+</LinearLayout>
+</layout>

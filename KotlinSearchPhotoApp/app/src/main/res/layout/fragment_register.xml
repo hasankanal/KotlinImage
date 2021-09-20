@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="registerView"
+            type="com.hasankanal.kotlinsearchphotoapp.ui.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.login.LoginFragment"
+        android:background="@drawable/splash_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:translationZ="5dp"
+                android:elevation="5dp"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#CAAEC1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                android:translationZ="1dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp">
+
+                    <!--Name Bunch -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2E001A">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_name"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="#2E001A"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/iv_name"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_person_24"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_name"
+                            style="@style/MyCustomTextAppearance"
+                            android:hint="name"
+                            android:singleLine="true"
+                            android:text="@={registerView.inputFirstName}"
+                            android:layout_toEndOf="@+id/rl_name"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/edittext_style"/>
+
+                    </RelativeLayout>
+
+                    <!--Last Name Bunch -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2E001A"
+                        android:layout_marginTop="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_last_name"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="#2E001A"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/iv_last_name"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_person_24"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_last_name"
+                            android:layout_toEndOf="@+id/rl_last_name"
+                            style="@style/MyCustomTextAppearance"
+                            android:hint="lastname"
+                            android:text="@={registerView.inputLastName}"
+                            android:singleLine="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/edittext_style"/>
+
+                    </RelativeLayout>
+
+                    <!--Username Bunch -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2E001A"
+                        android:layout_marginTop="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_username"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="#2E001A"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/iv_username"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_person_24"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_username"
+                            android:layout_toEndOf="@+id/rl_username"
+                            android:singleLine="true"
+                            style="@style/MyCustomTextAppearance"
+                            android:hint="username"
+                            android:text="@={registerView.inputUserName}"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/edittext_style"/>
+
+                    </RelativeLayout>
+
+                    <!--Email Bunch -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2E001A"
+                        android:layout_marginTop="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_email"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="#2E001A"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/iv_email"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_mail_24"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_email"
+                            android:layout_toEndOf="@+id/rl_email"
+                            style="@style/MyCustomTextAppearance"
+                            android:hint="email"
+                            android:singleLine="true"
+                            android:text="@={registerView.inputEmail}"
+                            android:inputType="textEmailAddress"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/edittext_style"/>
+
+                    </RelativeLayout>
+
+                    <!--Password Bunch -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="#2E001A">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_iv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="#2E001A"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/iv_password"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_vpn_key_24"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/rl_iv"
+                            style="@style/MyCustomTextAppearance"
+                            android:hint="password"
+                            android:text="@={registerView.inputPassword}"
+                            android:singleLine="true"
+                            android:inputType="textPassword"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/edittext_style"/>
+
+                    </RelativeLayout>
+
+                    <!--Register Bunch -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="#CAAEC1">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bt_register"
+                            style="@style/ButtonStyle"
+                            android:onClick="@{() -> registerView.clickedRegisterButton()}"
+                            android:text="@string/register"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

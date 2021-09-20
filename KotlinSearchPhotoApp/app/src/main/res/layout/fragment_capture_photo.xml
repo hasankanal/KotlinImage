@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewCaptur"
+            type="com.hasankanal.kotlinsearchphotoapp.ui.capturePhoto.CapturePhotoViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="7"
+        android:background="@color/primaryDarkColor">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_capture"
+            android:layout_weight="1"
+            android:layout_margin="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bt_take_photo"
+            android:layout_weight="3"
+            style="@style/ButtonStyle"
+            android:text="TAKE PHOTO"
+            android:layout_margin="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bt_save_photo"
+            android:layout_weight="3"
+            style="@style/ButtonStyle"
+            android:text="SAVE PHOTO"
+            android:layout_margin="15dp"/>
+
+
+    </LinearLayout>
+</layout>
